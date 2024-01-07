@@ -62,11 +62,11 @@
   <p>score : 0</p>
   <div id="grid"></div>
   <div id="phone">
-    <button style="cursor: pointer; transform: rotate(-90deg);margin-top: 30px;margin-bottom: 0;" onclick="direction=1;"><img src="right-arrow.png"></button>
+    <button style="cursor: pointer; transform: rotate(-90deg);margin-top: 30px;margin-bottom: 0;" onclick="if (direction!==2) {direction=1};"><img src="right-arrow.png"></button>
     <div id="three">
-      <button class="b3" style="transform: rotate(180deg); margin-bottom: 40px;" onclick="direction=4"><img src="right-arrow.png"></button>
-      <button  class="b3" style="transform: rotate(90deg);" onclick="direction=2"><img src="right-arrow.png"></button>
-      <button  class="b3" style="margin-bottom: 35px;" onclick="direction=3"><img src="right-arrow.png"></button>
+      <button class="b3" style="transform: rotate(180deg); margin-bottom: 40px;" onclick="if (direction!==3) {direction=4}"><img src="right-arrow.png"></button>
+      <button  class="b3" style="transform: rotate(90deg);" onclick="if (direction!==1) {direction=2}"><img src="right-arrow.png"></button>
+      <button  class="b3" style="margin-bottom: 35px;" onclick="if (direction!==4) {direction=3}"><img src="right-arrow.png"></button>
     </div>
   </div>
   <script src="snake.js"></script>
