@@ -24,22 +24,26 @@ let direction=0;
 document.addEventListener('keydown',handle_keydown);
 function handle_keydown(event) {
   switch (event.key) {
-    case 'ArrowUp','w' :
+    case 'w':
+    case 'ArrowUp' :
       if (direction!==2) {
         direction=1;
       }
     break;
-    case 'ArrowDown','s' :
+    case 's':
+    case 'ArrowDown' :
       if (direction!==1) {
         direction=2;
       } 
     break;
-    case 'ArrowRight','d':
+    case 'd':
+    case 'ArrowRight':
       if (direction!==4) {
         direction=3;
       }
     break;
-    case 'ArrowLeft','a' :
+    case 'a':
+    case 'ArrowLeft' :
       if (direction!==3) {
         direction=4;
       }
