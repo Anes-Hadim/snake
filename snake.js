@@ -134,6 +134,7 @@ function end_game() {
    if (check) {
     clearInterval(repeat);
     document.querySelector('p').innerHTML+=`<br>You lost`;
-    document.body.innerHTML+=`<button><a href="snake.html"><img src="refresh.png"></a></button>`;
+    document.getElementById('phone').style='';
+    document.getElementById('phone').innerHTML=`<button><a href="snake.html"><img src="refresh.png"></a></button>`;
    }
 }
