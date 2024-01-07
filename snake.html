@@ -10,7 +10,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 75vh;
+        height: 100vh;
         margin: 0;
         flex-wrap: wrap;
       }
@@ -18,12 +18,13 @@
         display: grid;
         grid-template-columns: repeat(10, 30px);
         grid-template-rows: repeat(10,30px);
+        border: solid 1px ;
+        
       }
       .box{
         background-color: white;
         height: 100%;
         width: 100%;
-        border: 1px solid black;
       }
       p{
         flex-basis: 100%;
@@ -42,11 +43,32 @@
       img{
         width: 50px;
       }
+      #phone{
+         flex-basis: 100%;
+         display: grid;
+      }
+      .b3{
+        margin: 0;
+        cursor: pointer;
+      }
+      #three{
+        display: grid;
+        grid-template-columns: 50px 50px 50px;
+        justify-content: center;
+      }
   </style>
 </head>
 <body>
   <p>score : 0</p>
   <div id="grid"></div>
+  <div id="phone">
+    <button style="cursor: pointer; transform: rotate(-90deg);margin-top: 30px;margin-bottom: 0;" onclick="direction=1;"><img src="right-arrow.png"></button>
+    <div id="three">
+      <button class="b3" style="transform: rotate(180deg); margin-bottom: 40px;" onclick="direction=4"><img src="right-arrow.png"></button>
+      <button  class="b3" style="transform: rotate(90deg);" onclick="direction=2"><img src="right-arrow.png"></button>
+      <button  class="b3" style="margin-bottom: 35px;" onclick="direction=3"><img src="right-arrow.png"></button>
+    </div>
+  </div>
   <script src="snake.js"></script>
 </body>
 </html>

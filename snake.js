@@ -20,21 +20,29 @@ function generate_food() {
 }
 let score=0;
 
-let direction=0
+let direction=0;
 document.addEventListener('keydown',handle_keydown);
 function handle_keydown(event) {
   switch (event.key) {
-    case 'ArrowUp' :
-       direction=1;
+    case 'ArrowUp','w' :
+      if (direction!==2) {
+        direction=1;
+      }
     break;
-    case 'ArrowDown' :
-       direction=2;
+    case 'ArrowDown','s' :
+      if (direction!==1) {
+        direction=2;
+      } 
     break;
-    case 'ArrowRight' :
-       direction=3;
+    case 'ArrowRight','d':
+      if (direction!==4) {
+        direction=3;
+      }
     break;
-    case 'ArrowLeft' :
-       direction=4;
+    case 'ArrowLeft','a' :
+      if (direction!==3) {
+        direction=4;
+      }
     break;
   } 
 }
@@ -71,12 +79,12 @@ function move() {
   end_game();
 }
 
-let repeat=setInterval(move,200);
+let repeat=setInterval(move,170-3*score);
 
 function color() {
-  document.getElementById(`box${snake.head}`).style.backgroundColor=`black`;
-  snake.body.forEach(function(element){document.getElementById(`box${element}`).style.backgroundColor=`black`;});
   document.getElementById(`box${snake.tail}`).style.backgroundColor=`black`;
+  snake.body.forEach(function(element){document.getElementById(`box${element}`).style.backgroundColor=`black`;});
+  document.getElementById(`box${snake.head}`).style.backgroundColor=`#333333`;
 }
 
 function remove() {
